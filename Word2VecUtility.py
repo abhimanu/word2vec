@@ -10,8 +10,8 @@ import codecs
 from nltk.corpus import stopwords
 
 
-class KaggleWord2VecUtility(object):
-    """KaggleWord2VecUtility is a utility class for processing raw HTML text into segments for further learning"""
+class Word2VecUtility(object):
+    """Word2VecUtility is a utility class for processing raw HTML text into segments for further learning"""
 
     @staticmethod
     def sku_to_wordlist( sku, remove_stopwords=False ):
@@ -57,7 +57,7 @@ class KaggleWord2VecUtility(object):
             # If a sentence is empty, skip it
             if len(raw_sentence) > 0:
                 # Otherwise, call sku_to_wordlist to get a list of words
-                sentences.append( KaggleWord2VecUtility.sku_to_wordlist( raw_sentence, \
+                sentences.append( Word2VecUtility.sku_to_wordlist( raw_sentence, \
                   remove_stopwords ))
         #
         # Return the list of sentences (each sentence is a list of words,
